@@ -7,8 +7,6 @@
 <title>TEPSY TECH</title>
 
 <style>
-
-/* GLOBAL */
 body {
     margin: 0;
     font-family: Arial;
@@ -18,7 +16,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* NAV */
+/* MENU */
 nav {
     position: fixed;
     top: 0;
@@ -61,7 +59,7 @@ section.visible {
     margin-top: 20px;
 }
 
-/* BUTTON */
+/* BOUTONS */
 button {
     margin-top: 20px;
     padding: 12px 25px;
@@ -72,13 +70,17 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    background: #009e88;
+}
+
 /* VIDEO */
 .video iframe {
     max-width: 100%;
     border-radius: 10px;
 }
 
-/* FORM */
+/* FORMULAIRE */
 form {
     max-width: 400px;
     margin: auto;
@@ -92,7 +94,7 @@ input, textarea {
     border: none;
 }
 
-/* WHATSAPP */
+/* WHATSAPP FLOAT */
 .whatsapp {
     position: fixed;
     bottom: 20px;
@@ -101,8 +103,8 @@ input, textarea {
     color: white;
     padding: 15px;
     border-radius: 50%;
-    text-decoration: none;
     font-size: 20px;
+    text-decoration: none;
 }
 
 /* MOBILE */
@@ -120,87 +122,87 @@ input, textarea {
         width: 140px;
     }
 }
-
 </style>
+
 </head>
 
 <body>
 
 <!-- MENU -->
 <nav>
-<a href="#accueil">Accueil</a>
-<a href="#apropos">À propos</a>
-<a href="#services">Services</a>
-<a href="#video">Vidéo</a>
-<a href="#contact">Contact</a>
+    <a href="#accueil">Accueil</a>
+    <a href="#apropos">À propos</a>
+    <a href="#services">Services</a>
+    <a href="#video">Vidéo</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <!-- ACCUEIL -->
 <section id="accueil">
-<img src="logo.png" class="logo">
-<h1>TEPSY TECH</h1>
-<p>Santé & Technologie</p>
+    <img src="logo.png" class="logo">
+    <h1>TEPSY TECH</h1>
+    <p>Santé & Technologie</p>
 
-<button onclick="window.open('https://wa.me/TON_NUMERO','_blank')">
-Contact WhatsApp
-</button>
+    <button onclick="window.open('https://wa.me/33612345678','_blank')">
+        Contact WhatsApp
+    </button>
 </section>
 
 <!-- A PROPOS -->
 <section id="apropos">
-<h2>À propos</h2>
-<p>Expert en solutions digitales et santé moderne.</p>
-<img src="photo.jpg" class="photo">
+    <h2>À propos</h2>
+    <p>Expert en solutions digitales et santé moderne.</p>
+    <img src="photo.jpg" class="photo">
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-<h2>Mes Services</h2>
-<p>Création de sites web modernes, solutions digitales, innovation santé.</p>
+    <h2>Mes Services</h2>
+    <p>Création de sites web modernes, solutions digitales, innovation santé.</p>
 </section>
 
 <!-- VIDEO -->
 <section id="video">
-<h2>Présentation</h2>
+    <h2>Présentation</h2>
 
-<div class="video">
-<iframe width="400" height="250"
-src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-frameborder="0" allowfullscreen>
-</iframe>
-</div>
-
+    <div class="video">
+        <iframe width="400" height="250"
+        src="https://www.youtube.com/embed/VIDEO_ID"
+        frameborder="0" allowfullscreen>
+        </iframe>
+    </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<h2>Contact</h2>
+    <h2>Contact</h2>
 
-<form action="https://formsubmit.co/ouanouche.ms@gmail.com" method="POST">
-<input type="text" name="name" placeholder="Votre nom" required>
-<input type="email" name="email" placeholder="Votre email" required>
-<textarea name="message" placeholder="Votre message" required></textarea>
-<button type="submit">Envoyer</button>
-</form>
-
+    <form action="https://formsubmit.co/ouanouche.ms@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
 </section>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/0033649478647" class="whatsapp" target="_blank">💬</a>
+<!-- WHATSAPP FLOTTANT -->
+<a href="https://wa.me/0033649478647" class="whatsapp" target="_blank">
+💬
+</a>
 
-<!-- ANIMATION -->
+<!-- ANIMATION SCROLL -->
 <script>
 const sections = document.querySelectorAll("section");
 
 window.addEventListener("scroll", () => {
-sections.forEach(section => {
-const top = section.getBoundingClientRect().top;
-const trigger = window.innerHeight * 0.85;
+    sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        const trigger = window.innerHeight * 0.85;
 
-if (top < trigger) {
-section.classList.add("visible");
-}
-});
+        if (top < trigger) {
+            section.classList.add("visible");
+        }
+    });
 });
 </script>
 

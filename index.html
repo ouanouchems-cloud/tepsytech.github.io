@@ -7,44 +7,82 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background: #012169;
     color: white;
     text-align: center;
 }
 
-h1 {
-    margin-top: 100px;
+/* Logo */
+.logo {
+    width: 120px;
+    margin-top: 30px;
 }
 
-a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 25px;
+/* Titre */
+h1 {
+    font-size: 50px;
+    margin: 10px 0;
+    letter-spacing: 2px;
+}
+
+/* Sous-titre */
+p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* Photo */
+.photo {
+    width: 200px;
+    border-radius: 50%;
+    margin: 30px 0;
+    border: 4px solid #13B8A6;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Bouton */
+button {
     background: #13B8A6;
-    color: black;
-    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00566B;
+    transform: scale(1.05);
+}
+
+/* Animation */
+.fade {
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
 }
 </style>
+
 </head>
 
 <body>
 
-<h1>TEPSY TECH</h1>
-<p>Santé & Technologie</p>
+<img src="logo.png" class="logo fade">
 
-<a href="#">Me contacter</a>
+<h1 class="fade">TEPSY TECH</h1>
+<p class="fade">Santé & Technologie</p>
 
-<body>
+<img src="photo.jpg" class="photo fade">
 
-<img src="logo.png" alt="logo" style="width:150px; margin-top:20px;">
+<br>
 
-<h1>TEPSY TECH</h1>
-<p>Santé & Technologie</p>
-
-<img src="photo.jpg" alt="photo" style="width:200px; border-radius:50%; margin:20px 0;">
-
-<button>Me contacter</button>
+<button class="fade">Me contacter</button>
 
 </body>
 </html>

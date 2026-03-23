@@ -13,7 +13,6 @@ color:white;
 text-align:center;
 }
 
-/* MENU */
 nav{
 background:#07204a;
 padding:15px;
@@ -29,45 +28,40 @@ text-decoration:none;
 font-weight:bold;
 }
 
-/* SECTION */
 section{
 padding:80px 20px;
 }
 
-/* TITRE */
 h1{
-font-size:40px;
+font-size:42px;
 }
 
-h2{
-margin-bottom:30px;
-}
-
-/* LOGO */
 .logo{
 width:80px;
 margin-top:80px;
 }
 
-/* PHOTO */
 .photo{
 width:200px;
 height:200px;
 border-radius:50%;
 border:4px solid #00d4a6;
 object-fit:cover;
-margin-top:20px;
 }
 
-/* BOUTON */
 .btn{
 display:inline-block;
 margin-top:15px;
-padding:10px 20px;
+padding:12px 25px;
 background:#00d4a6;
 color:white;
 text-decoration:none;
 border-radius:8px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#00b894;
 }
 
 /* PRODUITS */
@@ -95,12 +89,28 @@ width:100%;
 height:200px;
 object-fit:cover;
 border-radius:10px;
-margin-bottom:15px;
 }
 
 .prix{
 color:#00d4a6;
 font-weight:bold;
+font-size:18px;
+}
+
+/* ARGUMENTS */
+.arguments{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.arg{
+background:#1b3b6f;
+padding:15px;
+border-radius:10px;
+width:220px;
 }
 
 /* CONTACT */
@@ -124,7 +134,6 @@ border-radius:5px;
 <!-- MENU -->
 <nav>
 <a href="#accueil">Accueil</a>
-<a href="#apropos">À propos</a>
 <a href="#produits">Produits</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -133,22 +142,44 @@ border-radius:5px;
 <section id="accueil">
 <img src="logo.png" class="logo">
 
-<h1>TEPSY TECH</h1>
-<p>Santé & Technologie</p>
+<h1>Protégez votre santé dès aujourd’hui</h1>
+<p>Appareils médicaux fiables pour toute la famille</p>
 
 <img src="photo.jpg" class="photo">
 
 <br>
-<a href="#contact" class="btn">Me contacter</a>
+<a href="https://wa.me/33700000000?text=Bonjour je veux des informations" class="btn">
+📲 Contacter sur WhatsApp
+</a>
 </section>
 
-<!-- A PROPOS -->
-<section id="apropos">
-<h2>À propos</h2>
-<p>
-Nous proposons des appareils de santé fiables pour toute la famille :
-tensiomètres, glucomètres et accessoires médicaux.
-</p>
+<!-- ARGUMENTS -->
+<section>
+<h2>Pourquoi choisir TEPSY TECH ?</h2>
+
+<div class="arguments">
+
+<div class="arg">
+<h3>✔️ Qualité médicale</h3>
+<p>Produits fiables et testés</p>
+</div>
+
+<div class="arg">
+<h3>🚚 Livraison rapide</h3>
+<p>Expédition en 48h</p>
+</div>
+
+<div class="arg">
+<h3>💬 Support client</h3>
+<p>Réponse rapide sur WhatsApp</p>
+</div>
+
+<div class="arg">
+<h3>💰 Prix accessibles</h3>
+<p>Meilleur rapport qualité/prix</p>
+</div>
+
+</div>
 </section>
 
 <!-- PRODUITS -->
@@ -160,25 +191,31 @@ tensiomètres, glucomètres et accessoires médicaux.
 <div class="produit">
 <img src="tensiometre.jpg">
 <h3>Tensiomètre</h3>
-<p>Mesure rapide et précise de la tension</p>
+<p>Mesurez votre tension facilement à domicile</p>
 <p class="prix">39€</p>
-<a href="https://wa.me/0033649478647?text=Bonjour je veux commander un tensiomètre" class="btn">Commander</a>
+<a href="https://wa.me/0033649478647?text=Bonjour je veux commander un tensiomètre" class="btn">
+Commander
+</a>
 </div>
 
 <div class="produit">
 <img src="glucometre.jpg">
 <h3>Glucomètre</h3>
-<p>Suivi simple de votre glycémie</p>
+<p>Contrôlez votre glycémie en quelques secondes</p>
 <p class="prix">29€</p>
-<a href="https://wa.me/0033649478647?text=Bonjour je veux commander un glucomètre" class="btn">Commander</a>
+<a href="https://wa.me/33700000000?text=Bonjour je veux commander un glucomètre" class="btn">
+Commander
+</a>
 </div>
 
 <div class="produit">
 <img src="accessoires.jpg">
 <h3>Accessoires santé</h3>
-<p>Thermomètre, balance, etc.</p>
+<p>Thermomètre, balance et plus</p>
 <p class="prix">19€</p>
-<a href="https://wa.me/0033649478647?text=Bonjour je veux commander des accessoires santé" class="btn">Commander</a>
+<a href="https://wa.me/0033649478647?text=Bonjour je veux des accessoires santé" class="btn">
+Commander
+</a>
 </div>
 
 </div>
@@ -186,7 +223,7 @@ tensiomètres, glucomètres et accessoires médicaux.
 
 <!-- VIDEO -->
 <section>
-<h2>Présentation</h2>
+<h2>Comprendre votre santé</h2>
 
 <div style="max-width:600px;margin:auto;">
 <iframe width="100%" height="315"
@@ -201,9 +238,17 @@ frameborder="0" allowfullscreen>
 <section id="contact">
 <h2>Contact</h2>
 
+<p>Une question ? Contactez-nous directement 👇</p>
+
+<a href="https://wa.me/0033649478647?text=Bonjour je souhaite plus d'informations" class="btn">
+📲 WhatsApp direct
+</a>
+
+<br><br>
+
 <form action="mailto:ouanouche.ms@gmail.com" method="post" enctype="text/plain">
-<input type="text" placeholder="Nom" required>
-<input type="email" placeholder="Email" required>
+<input type="text" placeholder="Nom">
+<input type="email" placeholder="Email">
 <textarea placeholder="Message"></textarea>
 <button class="btn">Envoyer</button>
 </form>

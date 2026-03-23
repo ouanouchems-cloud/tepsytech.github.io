@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <title>TEPSY TECH</title>
 
 <style>
+
+/* STYLE GLOBAL */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #012169;
+    font-family: Arial;
+    background-color: #0a2a66;
     color: white;
     text-align: center;
+    scroll-behavior: smooth;
 }
 
-/* NAVBAR */
+/* MENU */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(1,33,105,0.9);
+    background: #071d4d;
     padding: 15px;
 }
 
@@ -29,115 +33,97 @@ nav a {
     font-weight: bold;
 }
 
-/* HERO */
-.hero {
-    padding-top: 120px;
-}
-
-.logo {
-    width: 100px;
-}
-
-.photo {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 3px solid #13B8A6;
-    margin-top: 20px;
-    object-fit: cover;
-}
-
-/* BUTTON */
-button {
-    margin-top: 20px;
-    background: #13B8A6;
-    border: none;
-    padding: 12px 25px;
-    color: white;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
 /* SECTIONS */
 section {
-    padding: 80px 20px;
+    padding: 100px 20px;
 }
 
-h2 {
-    margin-bottom: 20px;
+/* LOGO */
+.logo {
+    width: 120px;
 }
 
-/* CARD */
-.card {
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 400px;
-    border-radius: 10px;
+/* PHOTO */
+.photo {
+    width: 200px;
+    border-radius: 50%;
+    border: 4px solid #00bfa6;
+    margin-top: 20px;
 }
+
+/* BOUTON */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00bfa6;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* VIDEO */
+.video {
+    margin-top: 30px;
+}
+
 </style>
-
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- MENU -->
 <nav>
-<a href="#">Accueil</a>
-<a href="#about">À propos</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
+    <a href="#accueil">Accueil</a>
+    <a href="#apropos">À propos</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-<img src="logo.png" class="logo">
+<!-- ACCUEIL -->
+<section id="accueil">
+    <img src="logo.png" class="logo">
+    <h1>TEPSY TECH</h1>
+    <p>Santé & Technologie</p>
+    <button>Me contacter</button>
+</section>
 
-<h1>TEPSY TECH</h1>
-<p>Santé & Technologie</p>
-
-<img src="photo.jpg" class="photo">
-
-<br>
-<button>Me contacter</button>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-<h2>À propos</h2>
-<p>
-Fondateur de TEPSY TECH, je combine expertise en santé et innovation technologique
-pour créer des solutions modernes, efficaces et centrées sur l’humain.
-</p>
+<!-- A PROPOS -->
+<section id="apropos">
+    <h2>À propos</h2>
+    <p>Je suis spécialisé dans la technologie et les solutions santé.</p>
+    <img src="photo.jpg" class="photo">
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-<h2>Services</h2>
+    <h2>Mes Services</h2>
+    <p>Création de sites web, solutions digitales, santé et technologie.</p>
+</section>
 
-<div class="card">
-<h3>Conseil Tech</h3>
-<p>Accompagnement digital et stratégie technologique</p>
-</div>
+<!-- VIDEO -->
+<section>
+    <h2>Présentation vidéo</h2>
 
-<div class="card">
-<h3>Santé Digitale</h3>
-<p>Solutions innovantes pour le secteur médical</p>
-</div>
+    <!-- OPTION 1 : YouTube -->
+    <div class="video">
+        <iframe width="400" height="250"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        frameborder="0" allowfullscreen>
+        </iframe>
+    </div>
 
-<div class="card">
-<h3>Développement Web</h3>
-<p>Création de sites modernes et performants</p>
-</div>
-
+    <!-- OPTION 2 : vidéo locale (décommente si tu upload une vidéo) -->
+    <!--
+    <video width="400" controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    -->
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<h2>Contact</h2>
-<p>Email : contact@tepsytech.com</p>
-<button>Envoyer un message</button>
+    <h2>Contact</h2>
+    <p>Email : tonemail@gmail.com</p>
 </section>
 
 </body>

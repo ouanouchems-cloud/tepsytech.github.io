@@ -8,7 +8,7 @@
 
 <style>
 
-/* STYLE GLOBAL */
+/* GLOBAL */
 body {
     margin: 0;
     font-family: Arial;
@@ -38,6 +38,15 @@ nav a {
 /* SECTIONS */
 section {
     padding: 100px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+/* ANIMATION ACTIVE */
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* LOGO */
@@ -58,14 +67,9 @@ section {
     transform: scale(1.1);
 }
 
-/* TITRES ANIMATION */
-h1, h2 {
-    animation: fadeIn 1.5s ease;
-}
-
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
+/* TITRE */
+h1 {
+    font-size: 40px;
 }
 
 /* BOUTON */
@@ -90,7 +94,7 @@ button:hover {
     border-radius: 10px;
 }
 
-/* FORMULAIRE */
+/* FORM */
 form {
     max-width: 400px;
     margin: auto;
@@ -116,7 +120,7 @@ input, textarea {
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 26px;
     }
 }
 
@@ -169,7 +173,7 @@ input, textarea {
 <section id="contact">
     <h2>Contact</h2>
 
-    <form action="https://formsubmit.co/ouanouche.ms@gmail.com" method="POST">
+    <form action="https://formsubmit.co/tonemail@gmail.com" method="POST">
         <input type="text" name="name" placeholder="Votre nom" required>
         <input type="email" name="email" placeholder="Votre email" required>
         <textarea name="message" placeholder="Votre message" required></textarea>
@@ -177,6 +181,22 @@ input, textarea {
     </form>
 
 </section>
+
+<!-- SCRIPT ANIMATION SCROLL -->
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        const trigger = window.innerHeight * 0.85;
+
+        if (top < trigger) {
+            section.classList.add("visible");
+        }
+    });
+});
+</script>
 
 </body>
 </html>

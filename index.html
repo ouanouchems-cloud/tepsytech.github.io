@@ -53,6 +53,7 @@ section.visible {
     width: 160px;
     border-radius: 50%;
     border: 3px solid #00bfa6;
+    margin-top: 20px;
 }
 
 /* BUTTON */
@@ -63,21 +64,31 @@ button {
     color: white;
     margin-top: 15px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 /* VIDEO */
 .video iframe {
     width: 100%;
-    height: 315px;
     max-width: 600px;
+    height: 315px;
     border-radius: 10px;
 }
 
-/* FORM */
+/* FORM PRO */
+form {
+    max-width: 400px;
+    margin: auto;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+}
+
 input, textarea {
     width: 90%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
+    border-radius: 5px;
     border: none;
 }
 
@@ -109,6 +120,7 @@ input, textarea {
 <!-- MENU -->
 <nav>
 <a href="#accueil">Accueil</a>
+<a href="#apropos">À propos</a>
 <a href="#services">Services</a>
 <a href="#video">Vidéo</a>
 <a href="#contact">Contact</a>
@@ -131,6 +143,17 @@ Contact WhatsApp
 </button>
 </section>
 
+<!-- A PROPOS (PHOTO REMISE) -->
+<section id="apropos">
+<h2>À propos</h2>
+
+<p>
+Expert en solutions digitales et santé moderne.
+</p>
+
+<img src="photo.jpg" class="photo">
+</section>
+
 <!-- SERVICES -->
 <section id="services">
 <h2>Nos Services</h2>
@@ -141,32 +164,28 @@ Contact WhatsApp
 
 </section>
 
-<!-- VIDEO (CORRIGÉE) -->
+<!-- VIDEO -->
 <section id="video">
 <h2>Présentation</h2>
 
-<p>Découvrez l'importance du suivi de santé avec la technologie</p>
-
 <div class="video">
 <iframe 
-src="https://www.youtube.com/embed/Ui4OAA51cNc" 
-title="Tensiomètre explication"
+src="https://www.youtube.com/embed/Ui4OAA51cNc"
 frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen>
 </iframe>
 </div>
 
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT (CORRIGÉ) -->
 <section id="contact">
 <h2>Contact</h2>
 
 <form action="https://formsubmit.co/ouanouche.ms@gmail.com" method="POST">
-<input type="text" name="name" placeholder="Nom" required><br>
-<input type="email" name="email" placeholder="Email" required><br>
-<textarea name="message" placeholder="Votre message" required></textarea><br>
+<input type="text" name="name" placeholder="Votre nom" required>
+<input type="email" name="email" placeholder="Votre email" required>
+<textarea name="message" placeholder="Votre message" required></textarea>
 <button type="submit">Envoyer</button>
 </form>
 

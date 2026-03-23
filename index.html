@@ -13,6 +13,7 @@ body {
     background: #0a2a66;
     color: white;
     text-align: center;
+    scroll-behavior: smooth;
 }
 
 /* MENU */
@@ -21,6 +22,7 @@ nav {
     width: 100%;
     background: #071d4d;
     padding: 15px;
+    top: 0;
 }
 
 nav a {
@@ -31,7 +33,20 @@ nav a {
 
 /* SECTIONS */
 section {
-    padding: 100px 20px;
+    padding: 90px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.8s;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TEXTE COMPACT */
+p {
+    margin: 5px 0;
 }
 
 /* PHOTO */
@@ -42,12 +57,18 @@ section {
 }
 
 /* PRODUITS */
-.produit {
+.produits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
     background: rgba(255,255,255,0.05);
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 300px;
+    margin: 10px;
+    padding: 15px;
     border-radius: 10px;
+    max-width: 250px;
 }
 
 /* BOUTON */
@@ -57,9 +78,32 @@ button {
     border: none;
     color: white;
     margin-top: 10px;
+    cursor: pointer;
 }
 
-/* WHATSAPP */
+/* VIDEO */
+.video iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 315px;
+}
+
+/* FORM */
+form {
+    max-width: 400px;
+    margin: auto;
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* WHATSAPP GLOBAL */
 .whatsapp {
     position: fixed;
     bottom: 20px;
@@ -79,51 +123,64 @@ button {
 <!-- MENU -->
 <nav>
 <a href="#accueil">Accueil</a>
+<a href="#apropos">À propos</a>
+<a href="#services">Services</a>
 <a href="#produits">Produits</a>
-<a href="#video">Conseil</a>
+<a href="#video">Conseils</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <!-- ACCUEIL -->
 <section id="accueil">
 <h1>TEPSY TECH</h1>
-
 <h2>Votre santé à domicile, simplement</h2>
 
-<p>
-Nous proposons des appareils médicaux fiables pour surveiller votre santé
-au quotidien : tension, glycémie et bien plus.
-</p>
+<p>Appareils fiables pour surveiller votre santé au quotidien.</p>
+<p>Tension, glycémie et bien plus.</p>
 
+<button onclick="window.open('https://wa.me/33612345678','_blank')">
+Contacter via WhatsApp
+</button>
+</section>
+
+<!-- A PROPOS -->
+<section id="apropos">
+<h2>À propos</h2>
+<p>Spécialiste des équipements de santé à domicile.</p>
 <img src="photo.jpg" class="photo">
+</section>
+
+<!-- SERVICES (CORRIGÉ) -->
+<section id="services">
+<h2>Nos Services</h2>
+
+<p>✔ Vente d'appareils médicaux fiables</p>
+<p>✔ Conseils pour bien choisir votre équipement</p>
+<p>✔ Assistance rapide et accompagnement client</p>
+
 </section>
 
 <!-- PRODUITS -->
 <section id="produits">
 <h2>Nos Produits</h2>
 
-<div class="produit">
+<div class="produits">
+
+<div class="card">
 <h3>Tensiomètre</h3>
-<p>Mesurez votre tension facilement à la maison</p>
-<button onclick="window.open('https://wa.me/0033649478647','_blank')">
-Commander sur WhatsApp
-</button>
+<p>Mesure rapide et précise de la tension</p>
 </div>
 
-<div class="produit">
+<div class="card">
 <h3>Glucomètre</h3>
 <p>Suivi simple de votre glycémie</p>
-<button onclick="window.open('https://wa.me/0033649478647','_blank')">
-Commander sur WhatsApp
-</button>
 </div>
 
-<div class="produit">
+<div class="card">
 <h3>Accessoires santé</h3>
-<p>Thermomètres, balances et autres équipements</p>
-<button onclick="window.open('https://wa.me/0033649478647','_blank')">
-Commander sur WhatsApp
-</button>
+<p>Thermomètre, balance et autres</p>
+</div>
+
 </div>
 
 </section>
@@ -132,26 +189,42 @@ Commander sur WhatsApp
 <section id="video">
 <h2>Conseils santé</h2>
 
-<iframe width="300" height="200"
-src="https://www.youtube.com/embed/Ui4OAA51cNc"
-frameborder="0" allowfullscreen>
-</iframe>
+<div class="video">
+<iframe src="https://www.youtube.com/embed/Ui4OAA51cNc" allowfullscreen></iframe>
+</div>
 
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
-<p>Commandez facilement via WhatsApp</p>
 
-<button onclick="window.open('https://wa.me/0033649478647','_blank')">
-Contacter maintenant
-</button>
+<p>Réponse rapide sous 24h</p>
+
+<form action="https://formsubmit.co/ouanouche.ms@gmail.com" method="POST">
+<input type="text" name="name" placeholder="Nom" required>
+<input type="email" name="email" placeholder="Email" required>
+<textarea name="message" placeholder="Message" required></textarea>
+<button type="submit">Envoyer</button>
+</form>
 
 </section>
 
 <!-- WHATSAPP -->
 <a href="https://wa.me/0033649478647" class="whatsapp">💬</a>
+
+<!-- SCRIPT -->
+<script>
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll", () => {
+sections.forEach(section => {
+const top = section.getBoundingClientRect().top;
+if (top < window.innerHeight * 0.85) {
+section.classList.add("visible");
+}
+});
+});
+</script>
 
 </body>
 </html>

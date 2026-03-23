@@ -13,7 +13,6 @@ body {
     background: #0a2a66;
     color: white;
     text-align: center;
-    scroll-behavior: smooth;
 }
 
 /* MENU */
@@ -22,8 +21,6 @@ nav {
     width: 100%;
     background: #071d4d;
     padding: 15px;
-    top: 0;
-    z-index: 1000;
 }
 
 nav a {
@@ -35,61 +32,31 @@ nav a {
 /* SECTIONS */
 section {
     padding: 100px 20px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 0.8s;
 }
-
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* LOGO */
-.logo { width: 100px; }
 
 /* PHOTO */
 .photo {
-    width: 160px;
+    width: 150px;
     border-radius: 50%;
     border: 3px solid #00bfa6;
-    margin-top: 20px;
 }
 
-/* BUTTON */
+/* PRODUITS */
+.produit {
+    background: rgba(255,255,255,0.05);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* BOUTON */
 button {
-    padding: 12px 25px;
+    padding: 10px 20px;
     background: #00bfa6;
     border: none;
     color: white;
-    margin-top: 15px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* VIDEO */
-.video iframe {
-    width: 100%;
-    max-width: 600px;
-    height: 315px;
-    border-radius: 10px;
-}
-
-/* FORM PRO */
-form {
-    max-width: 400px;
-    margin: auto;
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-input, textarea {
-    width: 90%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: none;
+    margin-top: 10px;
 }
 
 /* WHATSAPP */
@@ -103,14 +70,6 @@ input, textarea {
     color: white;
     text-decoration: none;
 }
-
-/* MOBILE */
-@media (max-width: 600px) {
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-}
 </style>
 
 </head>
@@ -120,93 +79,79 @@ input, textarea {
 <!-- MENU -->
 <nav>
 <a href="#accueil">Accueil</a>
-<a href="#apropos">À propos</a>
-<a href="#services">Services</a>
-<a href="#video">Vidéo</a>
+<a href="#produits">Produits</a>
+<a href="#video">Conseil</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <!-- ACCUEIL -->
 <section id="accueil">
-<img src="logo.png" class="logo">
 <h1>TEPSY TECH</h1>
 
-<h2>Attirez plus de clients grâce à la technologie</h2>
+<h2>Votre santé à domicile, simplement</h2>
 
 <p>
-Nous aidons les professionnels à développer leur visibilité
-grâce à des solutions digitales modernes.
-</p>
-
-<button onclick="window.open('https://wa.me/33612345678','_blank')">
-Contact WhatsApp
-</button>
-</section>
-
-<!-- A PROPOS (PHOTO REMISE) -->
-<section id="apropos">
-<h2>À propos</h2>
-
-<p>
-Expert en solutions digitales et santé moderne.
+Nous proposons des appareils médicaux fiables pour surveiller votre santé
+au quotidien : tension, glycémie et bien plus.
 </p>
 
 <img src="photo.jpg" class="photo">
 </section>
 
-<!-- SERVICES -->
-<section id="services">
-<h2>Nos Services</h2>
+<!-- PRODUITS -->
+<section id="produits">
+<h2>Nos Produits</h2>
 
-<p>✔ Création de site web professionnel</p>
-<p>✔ Visibilité en ligne</p>
-<p>✔ Solutions digitales santé</p>
+<div class="produit">
+<h3>Tensiomètre</h3>
+<p>Mesurez votre tension facilement à la maison</p>
+<button onclick="window.open('https://wa.me/0033649478647','_blank')">
+Commander sur WhatsApp
+</button>
+</div>
+
+<div class="produit">
+<h3>Glucomètre</h3>
+<p>Suivi simple de votre glycémie</p>
+<button onclick="window.open('https://wa.me/0033649478647','_blank')">
+Commander sur WhatsApp
+</button>
+</div>
+
+<div class="produit">
+<h3>Accessoires santé</h3>
+<p>Thermomètres, balances et autres équipements</p>
+<button onclick="window.open('https://wa.me/0033649478647','_blank')">
+Commander sur WhatsApp
+</button>
+</div>
 
 </section>
 
 <!-- VIDEO -->
 <section id="video">
-<h2>Présentation</h2>
+<h2>Conseils santé</h2>
 
-<div class="video">
-<iframe 
+<iframe width="300" height="200"
 src="https://www.youtube.com/embed/Ui4OAA51cNc"
-frameborder="0"
-allowfullscreen>
+frameborder="0" allowfullscreen>
 </iframe>
-</div>
 
 </section>
 
-<!-- CONTACT (CORRIGÉ) -->
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
+<p>Commandez facilement via WhatsApp</p>
 
-<form action="https://formsubmit.co/ouanouche.ms@gmail.com" method="POST">
-<input type="text" name="name" placeholder="Votre nom" required>
-<input type="email" name="email" placeholder="Votre email" required>
-<textarea name="message" placeholder="Votre message" required></textarea>
-<button type="submit">Envoyer</button>
-</form>
+<button onclick="window.open('https://wa.me/0033649478647','_blank')">
+Contacter maintenant
+</button>
 
 </section>
 
 <!-- WHATSAPP -->
 <a href="https://wa.me/0033649478647" class="whatsapp">💬</a>
-
-<!-- SCRIPT -->
-<script>
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-sections.forEach(section => {
-const top = section.getBoundingClientRect().top;
-if (top < window.innerHeight * 0.85) {
-section.classList.add("visible");
-}
-});
-});
-</script>
 
 </body>
 </html>

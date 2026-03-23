@@ -2,128 +2,258 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Pub TikTok TEPSY TECH</title>
+<title>TEPSY TECH</title>
 
 <style>
 body{
+margin:0;
 font-family:Arial;
 background:#0b2a66;
 color:white;
-padding:20px;
-line-height:1.6;
+text-align:center;
 }
-h1,h2{
-color:#00d4a6;
-}
-.section{
-background:#1b3b6f;
+
+nav{
+background:#07204a;
 padding:15px;
-margin-bottom:20px;
+position:fixed;
+width:100%;
+top:0;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:80px 20px;
+}
+
+h1{
+font-size:42px;
+}
+
+.logo{
+width:80px;
+margin-top:80px;
+}
+
+.photo{
+width:200px;
+height:200px;
+border-radius:50%;
+border:4px solid #00d4a6;
+object-fit:cover;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 25px;
+background:#00d4a6;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#00b894;
+}
+
+/* PRODUITS */
+.produits-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.produit{
+background:#1b3b6f;
+padding:20px;
+border-radius:15px;
+width:250px;
+transition:0.3s;
+}
+
+.produit:hover{
+transform:scale(1.05);
+}
+
+.produit img{
+width:100%;
+height:200px;
+object-fit:cover;
 border-radius:10px;
 }
-code{
-display:block;
-background:black;
+
+.prix{
+color:#00d4a6;
+font-weight:bold;
+font-size:18px;
+}
+
+/* ARGUMENTS */
+.arguments{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.arg{
+background:#1b3b6f;
+padding:15px;
+border-radius:10px;
+width:220px;
+}
+
+/* CONTACT */
+form{
+max-width:400px;
+margin:auto;
+}
+
+input, textarea{
+width:100%;
 padding:10px;
-margin-top:10px;
-color:#00ffcc;
+margin:10px 0;
+border:none;
+border-radius:5px;
 }
 </style>
 </head>
 
 <body>
 
-<h1>🎬 VIDÉO TIKTOK ULTRA VIRALE</h1>
+<!-- MENU -->
+<nav>
+<a href="#accueil">Accueil</a>
+<a href="#produits">Produits</a>
+<a href="#contact">Contact</a>
+</nav>
 
-<div class="section">
-<h2>🎯 Objectif</h2>
-<p>Attirer l’attention, créer une émotion, pousser à commander sur WhatsApp.</p>
+<!-- ACCUEIL -->
+<section id="accueil">
+<img src="logo.png" class="logo">
+
+<h1>Protégez votre santé dès aujourd’hui</h1>
+<p>Appareils médicaux fiables pour toute la famille</p>
+
+<img src="photo.jpg" class="photo">
+
+<br>
+<a href="https://wa.me/33700000000?text=Bonjour je veux des informations" class="btn">
+📲 Contacter sur WhatsApp
+</a>
+</section>
+
+<!-- ARGUMENTS -->
+<section>
+<h2>Pourquoi choisir TEPSY TECH ?</h2>
+
+<div class="arguments">
+
+<div class="arg">
+<h3>✔️ Qualité médicale</h3>
+<p>Produits fiables et testés</p>
 </div>
 
-<div class="section">
-<h2>🎬 SCÈNE 1 (HOOK)</h2>
-<p><strong>À dire :</strong></p>
-<code>80% des gens ne connaissent pas leur tension…</code>
-
-<p><strong>Texte écran :</strong></p>
-<code>⚠️ Danger invisible</code>
+<div class="arg">
+<h3>🚚 Livraison rapide</h3>
+<p>Expédition en 48h</p>
 </div>
 
-<div class="section">
-<h2>🎬 SCÈNE 2 (PROBLÈME)</h2>
-<p><strong>À dire :</strong></p>
-<code>Et pourtant… c’est souvent trop tard quand on découvre.</code>
-
-<p><strong>Texte écran :</strong></p>
-<code>💔 Risque réel</code>
+<div class="arg">
+<h3>💬 Support client</h3>
+<p>Réponse rapide sur WhatsApp</p>
 </div>
 
-<div class="section">
-<h2>🎬 SCÈNE 3 (SOLUTION)</h2>
-<p><strong>À dire :</strong></p>
-<code>Avec ce tensiomètre, tu peux vérifier en 30 secondes.</code>
-
-<p><strong>Texte écran :</strong></p>
-<code>✔️ Simple & rapide</code>
+<div class="arg">
+<h3>💰 Prix accessibles</h3>
+<p>Meilleur rapport qualité/prix</p>
 </div>
 
-<div class="section">
-<h2>🎬 SCÈNE 4 (ÉMOTION)</h2>
-<p><strong>À dire :</strong></p>
-<code>Protège-toi… et protège ta famille.</code>
+</div>
+</section>
 
-<p><strong>Texte écran :</strong></p>
-<code>❤️ Important</code>
+<!-- PRODUITS -->
+<section id="produits">
+<h2>Nos Produits</h2>
+
+<div class="produits-container">
+
+<div class="produit">
+<img src="tensiometre.jpg">
+<h3>Tensiomètre</h3>
+<p>Mesurez votre tension facilement à domicile</p>
+<p class="prix">39€</p>
+<a href="https://wa.me/0033649478647?text=Bonjour je veux commander un tensiomètre" class="btn">
+Commander
+</a>
 </div>
 
-<div class="section">
-<h2>🎬 SCÈNE 5 (CALL TO ACTION)</h2>
-<p><strong>À dire :</strong></p>
-<code>Écris-moi maintenant sur WhatsApp.</code>
-
-<p><strong>Texte écran :</strong></p>
-<code>📲 Commande rapide</code>
+<div class="produit">
+<img src="glucometre.jpg">
+<h3>Glucomètre</h3>
+<p>Contrôlez votre glycémie en quelques secondes</p>
+<p class="prix">29€</p>
+<a href="https://wa.me/0033649478647?text=Bonjour je veux commander un glucomètre" class="btn">
+Commander
+</a>
 </div>
 
-<div class="section">
-<h2>🎵 Musique</h2>
-<p>Choisis une musique tendance sur TikTok ou une musique calme (piano).</p>
-<p>Baisse le volume à 20%.</p>
+<div class="produit">
+<img src="accessoires.jpg">
+<h3>Accessoires santé</h3>
+<p>Thermomètre, balance et plus</p>
+<p class="prix">19€</p>
+<a href="https://wa.me/0033649478647?text=Bonjour je veux des accessoires santé" class="btn">
+Commander
+</a>
 </div>
 
-<div class="section">
-<h2>✂️ Montage</h2>
-<ul>
-<li>Durée : 15 secondes</li>
-<li>Format : vertical</li>
-<li>Coupe rapide entre les scènes</li>
-<li>Ajoute texte à l’écran</li>
-<li>Zoom léger pour dynamiser</li>
-</ul>
+</div>
+</section>
+
+<!-- VIDEO -->
+<section>
+<h2>Comprendre votre santé</h2>
+
+<div style="max-width:600px;margin:auto;">
+<iframe width="100%" height="315"
+src="https://www.youtube.com/embed/Ui4OAA51cNc"
+frameborder="0" allowfullscreen>
+</iframe>
 </div>
 
-<div class="section">
-<h2>📝 Description TikTok</h2>
-<code>
-Tu connais ta tension ? 😳  
+</section>
 
-Ne prends pas de risque…  
-La santé passe avant tout ❤️  
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
 
-📲 Commande sur WhatsApp  
+<p>Une question ? Contactez-nous directement 👇</p>
 
-#sante #tension #danger #famille #tiktokfrance #pourtoi
-</code>
-</div>
+<a href="https://wa.me/0033649478647?text=Bonjour je souhaite plus d'informations" class="btn">
+📲 WhatsApp direct
+</a>
 
-<div class="section">
-<h2>🚀 Plan d’action</h2>
-<ul>
-<li>1 vidéo par jour pendant 5 jours</li>
-<li>Tester différents angles</li>
-<li>Répondre rapidement aux messages</li>
-</ul>
-</div>
+<br><br>
+
+<form action="mailto:ouanouche.ms@gmail.com" method="post" enctype="text/plain">
+<input type="text" placeholder="Nom">
+<input type="email" placeholder="Email">
+<textarea placeholder="Message"></textarea>
+<button class="btn">Envoyer</button>
+</form>
+
+</section>
 
 </body>
 </html>

@@ -23,6 +23,7 @@ nav {
     background: #071d4d;
     padding: 15px;
     top: 0;
+    z-index: 1000;
 }
 
 nav a {
@@ -68,10 +69,28 @@ p {
     margin: 10px;
     padding: 15px;
     border-radius: 10px;
-    max-width: 250px;
+    max-width: 260px;
+    transition: 0.3s;
 }
 
-/* BOUTON */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* IMAGES PRODUITS */
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* PRIX */
+.price {
+    font-size: 18px;
+    color: #00bfa6;
+    margin-top: 5px;
+}
+
+/* BUTTON */
 button {
     padding: 10px 20px;
     background: #00bfa6;
@@ -79,6 +98,7 @@ button {
     color: white;
     margin-top: 10px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 /* VIDEO */
@@ -86,6 +106,7 @@ button {
     width: 100%;
     max-width: 600px;
     height: 315px;
+    border-radius: 10px;
 }
 
 /* FORM */
@@ -101,9 +122,11 @@ input, textarea {
     width: 90%;
     padding: 10px;
     margin: 5px 0;
+    border-radius: 5px;
+    border: none;
 }
 
-/* WHATSAPP GLOBAL */
+/* WHATSAPP */
 .whatsapp {
     position: fixed;
     bottom: 20px;
@@ -113,6 +136,14 @@ input, textarea {
     border-radius: 50%;
     color: white;
     text-decoration: none;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
 }
 </style>
 
@@ -133,9 +164,10 @@ input, textarea {
 <!-- ACCUEIL -->
 <section id="accueil">
 <h1>TEPSY TECH</h1>
+
 <h2>Votre santé à domicile, simplement</h2>
 
-<p>Appareils fiables pour surveiller votre santé au quotidien.</p>
+<p>Surveillez votre santé avec des appareils fiables.</p>
 <p>Tension, glycémie et bien plus.</p>
 
 <button onclick="window.open('https://wa.me/33612345678','_blank')">
@@ -146,17 +178,19 @@ Contacter via WhatsApp
 <!-- A PROPOS -->
 <section id="apropos">
 <h2>À propos</h2>
+
 <p>Spécialiste des équipements de santé à domicile.</p>
+
 <img src="photo.jpg" class="photo">
 </section>
 
-<!-- SERVICES (CORRIGÉ) -->
+<!-- SERVICES -->
 <section id="services">
 <h2>Nos Services</h2>
 
-<p>✔ Vente d'appareils médicaux fiables</p>
-<p>✔ Conseils pour bien choisir votre équipement</p>
-<p>✔ Assistance rapide et accompagnement client</p>
+<p>✔ Vente d’appareils médicaux fiables</p>
+<p>✔ Conseils personnalisés</p>
+<p>✔ Assistance rapide</p>
 
 </section>
 
@@ -167,22 +201,36 @@ Contacter via WhatsApp
 <div class="produits">
 
 <div class="card">
+<img src="tensiometre.jpg">
 <h3>Tensiomètre</h3>
-<p>Mesure rapide et précise de la tension</p>
+<p>Mesure rapide et précise</p>
+<div class="price">39€</div>
+<button onclick="window.open('https://wa.me/33612345678','_blank')">
+Commander
+</button>
 </div>
 
 <div class="card">
+<img src="glucometre.jpg">
 <h3>Glucomètre</h3>
-<p>Suivi simple de votre glycémie</p>
+<p>Suivi simple de la glycémie</p>
+<div class="price">29€</div>
+<button onclick="window.open('https://wa.me/33612345678','_blank')">
+Commander
+</button>
 </div>
 
 <div class="card">
+<img src="accessoires.jpg">
 <h3>Accessoires santé</h3>
-<p>Thermomètre, balance et autres</p>
+<p>Thermomètre, balance, etc.</p>
+<div class="price">19€</div>
+<button onclick="window.open('https://wa.me/33612345678','_blank')">
+Commander
+</button>
 </div>
 
 </div>
-
 </section>
 
 <!-- VIDEO -->
@@ -213,7 +261,7 @@ Contacter via WhatsApp
 <!-- WHATSAPP -->
 <a href="https://wa.me/0033649478647" class="whatsapp">💬</a>
 
-<!-- SCRIPT -->
+<!-- ANIMATION -->
 <script>
 const sections = document.querySelectorAll("section");
 window.addEventListener("scroll", () => {

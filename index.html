@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,30 +9,25 @@
 body {
     margin: 0;
     font-family: Arial;
-    background-color: #0a2a66;
+    background: #0a2a66;
     color: white;
     text-align: center;
     scroll-behavior: smooth;
 }
 
-/* MENU */
 nav {
     position: fixed;
-    top: 0;
     width: 100%;
     background: #071d4d;
     padding: 15px;
-    z-index: 1000;
 }
 
 nav a {
     color: white;
-    margin: 0 15px;
+    margin: 0 10px;
     text-decoration: none;
-    font-weight: bold;
 }
 
-/* SECTIONS */
 section {
     padding: 100px 20px;
     opacity: 0;
@@ -46,163 +40,117 @@ section.visible {
     transform: translateY(0);
 }
 
-/* LOGO */
-.logo {
-    width: 100px;
-}
+.logo { width: 100px; }
 
-/* PHOTO */
 .photo {
-    width: 180px;
+    width: 160px;
     border-radius: 50%;
-    border: 4px solid #00bfa6;
-    margin-top: 20px;
+    border: 3px solid #00bfa6;
 }
 
-/* BOUTONS */
 button {
-    margin-top: 20px;
     padding: 12px 25px;
     background: #00bfa6;
     border: none;
     color: white;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-top: 15px;
 }
 
-button:hover {
-    background: #009e88;
-}
-
-/* VIDEO */
-.video iframe {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-/* FORMULAIRE */
-form {
-    max-width: 400px;
-    margin: auto;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: none;
-}
-
-/* WHATSAPP FLOAT */
 .whatsapp {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background: #25D366;
-    color: white;
     padding: 15px;
     border-radius: 50%;
-    font-size: 20px;
+    color: white;
     text-decoration: none;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    h1 {
-        font-size: 26px;
-    }
-
-    .photo {
-        width: 140px;
-    }
-}
 </style>
-
 </head>
 
 <body>
 
-<!-- MENU -->
 <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#apropos">À propos</a>
-    <a href="#services">Services</a>
-    <a href="#video">Vidéo</a>
-    <a href="#contact">Contact</a>
+<a href="#accueil">Accueil</a>
+<a href="#services">Services</a>
+<a href="#video">Vidéo</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <!-- ACCUEIL -->
 <section id="accueil">
-    <img src="logo.png" class="logo">
-    <h1>TEPSY TECH</h1>
-    <p>Santé & Technologie</p>
+<img src="logo.png" class="logo">
+<h1>TEPSY TECH</h1>
 
-    <button onclick="window.open('https://wa.me/33612345678','_blank')">
-        Contact WhatsApp
-    </button>
-</section>
+<h2>Attirez plus de clients grâce à la technologie</h2>
 
-<!-- A PROPOS -->
-<section id="apropos">
-    <h2>À propos</h2>
-    <p>Expert en solutions digitales et santé moderne.</p>
-    <img src="photo.jpg" class="photo">
+<p>
+Nous aidons les entreprises et professionnels de santé à développer leur visibilité
+et obtenir plus de clients grâce à des solutions digitales modernes.
+</p>
+
+<button onclick="window.open('https://wa.me/33612345678','_blank')">
+Contact WhatsApp
+</button>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-    <h2>Mes Services</h2>
-    <p>Création de sites web modernes, solutions digitales, innovation santé.</p>
+<h2>Nos Services</h2>
+
+<p>✔ Création de site web professionnel</p>
+<p>✔ Visibilité en ligne</p>
+<p>✔ Solutions digitales santé</p>
+
+<h3>Pourquoi nous choisir ?</h3>
+<p>
+✔ Site moderne et rapide  
+✔ Adapté mobile  
+✔ Attire de nouveaux clients  
+</p>
 </section>
 
 <!-- VIDEO -->
 <section id="video">
-    <h2>Présentation</h2>
+<h2>Présentation</h2>
 
-    <div class="video">
-        <iframe width="400" height="250"
-        src="https://www.youtube.com/embed/VIDEO_ID"
-        frameborder="0" allowfullscreen>
-        </iframe>
-    </div>
+<p>Découvrez comment TEPSY TECH peut transformer votre activité</p>
+
+<iframe width="300" height="200"
+src="https://www.youtube.com/embed/ysz5S6PUM-U"
+frameborder="0" allowfullscreen>
+</iframe>
+
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-    <h2>Contact</h2>
+<h2>Contact</h2>
 
-    <form action="https://formsubmit.co/ouanouche.ms@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="Votre nom" required>
-        <input type="email" name="email" placeholder="Votre email" required>
-        <textarea name="message" placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
-    </form>
+<p>Parlez-nous de votre projet dès aujourd’hui</p>
+
+<form action="https://formsubmit.co/ouanouche.ms@gmail.com" method="POST">
+<input type="text" name="name" placeholder="Nom" required><br>
+<input type="email" name="email" placeholder="Email" required><br>
+<textarea name="message" placeholder="Votre message" required></textarea><br>
+<button type="submit">Envoyer</button>
+</form>
+
 </section>
 
-<!-- WHATSAPP FLOTTANT -->
-<a href="https://wa.me/0033649478647" class="whatsapp" target="_blank">
-💬
-</a>
+<a href="https://wa.me/0033649478647" class="whatsapp">💬</a>
 
-<!-- ANIMATION SCROLL -->
 <script>
 const sections = document.querySelectorAll("section");
-
 window.addEventListener("scroll", () => {
-    sections.forEach(section => {
-        const top = section.getBoundingClientRect().top;
-        const trigger = window.innerHeight * 0.85;
-
-        if (top < trigger) {
-            section.classList.add("visible");
-        }
-    });
+sections.forEach(section => {
+const top = section.getBoundingClientRect().top;
+if (top < window.innerHeight * 0.85) {
+section.classList.add("visible");
+}
+});
 });
 </script>
 

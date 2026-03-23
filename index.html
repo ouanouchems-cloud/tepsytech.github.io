@@ -3,6 +3,7 @@
 
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TEPSY TECH</title>
 
 <style>
@@ -24,11 +25,12 @@ nav {
     width: 100%;
     background: #071d4d;
     padding: 15px;
+    z-index: 1000;
 }
 
 nav a {
     color: white;
-    margin: 0 20px;
+    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
 }
@@ -40,30 +42,82 @@ section {
 
 /* LOGO */
 .logo {
-    width: 120px;
+    width: 100px;
 }
 
 /* PHOTO */
 .photo {
-    width: 200px;
+    width: 180px;
     border-radius: 50%;
     border: 4px solid #00bfa6;
     margin-top: 20px;
+    transition: transform 0.4s;
+}
+
+.photo:hover {
+    transform: scale(1.1);
+}
+
+/* TITRES ANIMATION */
+h1, h2 {
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
 }
 
 /* BOUTON */
 button {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 12px 25px;
     background: #00bfa6;
     border: none;
     color: white;
     cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #009e88;
 }
 
 /* VIDEO */
-.video {
-    margin-top: 30px;
+.video iframe {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* FORMULAIRE */
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .photo {
+        width: 140px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
 }
 
 </style>
@@ -84,46 +138,44 @@ button {
     <img src="logo.png" class="logo">
     <h1>TEPSY TECH</h1>
     <p>Santé & Technologie</p>
-    <button>Me contacter</button>
+    <button onclick="location.href='#contact'">Me contacter</button>
 </section>
 
 <!-- A PROPOS -->
 <section id="apropos">
     <h2>À propos</h2>
-    <p>Je suis spécialisé dans la technologie et les solutions santé.</p>
+    <p>Spécialisé dans la technologie et les solutions santé modernes.</p>
     <img src="photo.jpg" class="photo">
 </section>
 
 <!-- SERVICES -->
 <section id="services">
     <h2>Mes Services</h2>
-    <p>Création de sites web, solutions digitales, santé et technologie.</p>
+    <p>Création de sites web, solutions digitales, innovation santé.</p>
 </section>
 
 <!-- VIDEO -->
 <section>
-    <h2>Présentation vidéo</h2>
-
-    <!-- OPTION 1 : YouTube -->
+    <h2>Présentation</h2>
     <div class="video">
         <iframe width="400" height="250"
         src="https://www.youtube.com/embed/dQw4w9WgXcQ"
         frameborder="0" allowfullscreen>
         </iframe>
     </div>
-
-    <!-- OPTION 2 : vidéo locale (décommente si tu upload une vidéo) -->
-    <!--
-    <video width="400" controls>
-        <source src="video.mp4" type="video/mp4">
-    </video>
-    -->
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
     <h2>Contact</h2>
-    <p>Email : tonemail@gmail.com</p>
+
+    <form action="https://formsubmit.co/tonemail@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+
 </section>
 
 </body>

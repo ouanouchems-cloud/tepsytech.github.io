@@ -8,7 +8,6 @@
 
 <style>
 
-/* GLOBAL */
 body {
     margin: 0;
     font-family: Arial;
@@ -18,7 +17,6 @@ body {
     scroll-behavior: smooth;
 }
 
-/* MENU */
 nav {
     position: fixed;
     top: 0;
@@ -35,7 +33,6 @@ nav a {
     font-weight: bold;
 }
 
-/* SECTIONS */
 section {
     padding: 100px 20px;
     opacity: 0;
@@ -43,18 +40,15 @@ section {
     transition: all 0.8s ease;
 }
 
-/* ANIMATION ACTIVE */
 section.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* LOGO */
 .logo {
     width: 100px;
 }
 
-/* PHOTO */
 .photo {
     width: 180px;
     border-radius: 50%;
@@ -67,12 +61,6 @@ section.visible {
     transform: scale(1.1);
 }
 
-/* TITRE */
-h1 {
-    font-size: 40px;
-}
-
-/* BOUTON */
 button {
     margin-top: 20px;
     padding: 12px 25px;
@@ -81,20 +69,17 @@ button {
     color: white;
     cursor: pointer;
     border-radius: 5px;
-    transition: 0.3s;
 }
 
 button:hover {
     background: #009e88;
 }
 
-/* VIDEO */
 .video iframe {
     max-width: 100%;
     border-radius: 10px;
 }
 
-/* FORM */
 form {
     max-width: 400px;
     margin: auto;
@@ -108,7 +93,18 @@ input, textarea {
     border-radius: 5px;
 }
 
-/* MOBILE */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
+
 @media (max-width: 600px) {
     nav a {
         display: block;
@@ -142,7 +138,10 @@ input, textarea {
     <img src="logo.png" class="logo">
     <h1>TEPSY TECH</h1>
     <p>Santé & Technologie</p>
-    <button onclick="location.href='#contact'">Me contacter</button>
+
+    <button onclick="window.open('https://wa.me/TON_NUMERO','_blank')">
+        Contact WhatsApp
+    </button>
 </section>
 
 <!-- A PROPOS -->
@@ -182,7 +181,12 @@ input, textarea {
 
 </section>
 
-<!-- SCRIPT ANIMATION SCROLL -->
+<!-- BOUTON WHATSAPP FLOTTANT -->
+<a href="https://wa.me/0033649478647" class="whatsapp" target="_blank">
+    💬
+</a>
+
+<!-- SCRIPT ANIMATION -->
 <script>
 const sections = document.querySelectorAll("section");
 
